@@ -1,0 +1,56 @@
+@model SubjectBook.Models.Subject
+
+<form method="post" asp-action="Create">
+    <div>
+        <div>
+            <h2>Add Subject</h2>
+        </div>
+        <div>
+            <div>
+
+                <div>
+                    <div>
+                        <label asp-for="subjectSyllabus"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="subjectSyllabus"/>
+                    </div>
+
+                </div>
+                
+                <div>
+                    <div>
+                        <label asp-for="subjectName"></label>
+                    </div>
+                    <div>
+                        <input asp-for="subjectName"/>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div>
+                        <label asp-for="subjectCredits"></label>
+                    </div>
+                    <div>
+                        <input asp-for="subjectCredits"/>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div>
+
+                        <div>
+                            <input type="submit" value="Create" />
+                        </div>
+                        <div>
+                            <a asp-action="Index">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>

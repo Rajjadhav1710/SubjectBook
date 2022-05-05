@@ -1,0 +1,53 @@
+@model SubjectBook.Models.Subject
+
+<form method="post" asp-action="Edit">
+    <input hidden asp-for="subjectID"/>
+    <div>
+        <div>
+            <h2>Edit Subject</h2>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <label asp-for="subjectName"></label>
+                    </div>
+                    <div>
+                        <input asp-for="subjectName"/>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <label asp-for="subjectSyllabus"></label>
+                    </div>
+                    <div class="col-8">
+                        <input asp-for="subjectSyllabus"/>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+                        <label asp-for="subjectCredits"></label>
+                    </div>
+                    <div>
+                        <input asp-for="subjectCredits"/>
+                    </div>
+
+                </div>
+                <div>
+                    <div>
+
+                        <div>
+                            <input type="submit"value="Update subject Details" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index">Back</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>

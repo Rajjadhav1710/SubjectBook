@@ -1,0 +1,44 @@
+@model IEnumerable<SubjectBook.Models.Subject>
+
+<div>
+    <div>
+        <div>
+            <h2>Subject List</h2>
+        </div>
+        
+        <div>
+            <a asp-controller="Subject" asp-action="Create">Create New Subject</a>
+        </div>
+    </div>
+    <br />
+    @if(Model.Count() > 0)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject Name</th>
+                    <th>Syllabus</th>
+                    <th>Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj1 in Model)
+                {
+                    <tr>
+                        <td>@obj1.subjectName</td>
+                        <td>@obj1.subjectSyllabus</td>
+                        <td>@obj1.subjectCredits</td>
+                        <td>
+                           <a asp-controller="Subject" asp-action="Edit" asp-route-subjectID="@obj1.subjectID">Edit</a>
+                            <a asp-controller="Subject" asp-action="Delete" asp-route-subjectID="@obj1.subjectID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p> No subject details.</p>
+    }
+</div>
